@@ -1,18 +1,18 @@
-import '../../../model/ride/ride_pref.dart';
-import '../ride_preferences_repository.dart';
+// import '../../../model/ride/ride_pref.dart';
+// import '../ride_preferences_repository.dart';
 
-import '../../dummy_data/dummy_data.dart';
+// import '../../dummy_data/dummy_data.dart';
 
-class MockRidePreferencesRepository extends RidePreferencesRepository {
-  final List<RidePreference> _pastPreferences = fakeRidePrefs;
+// class MockRidePreferencesRepository extends RidePreferencesRepository {
+//   final List<RidePreference> _pastPreferences = fakeRidePrefs;
 
-  @override
-  Future<List<RidePreference>> getPastPreferences() {
-    return Future.delayed(Duration(milliseconds: 2000), () => _pastPreferences);
-  }
+//   @override
+//   Future<List<RidePreference>> getPastPreferences() {
+//     return Future.delayed(Duration(milliseconds: 2000), () => _pastPreferences);
+//   }
 
-  @override
-  Future<void>addPreference(RidePreference preference) async{
-    _pastPreferences.add(preference);
-  }
-}
+//   @override
+//   Future<void>addPreference(RidePreference preference) async{
+//     _pastPreferences.add(preference);
+//   }
+// }
