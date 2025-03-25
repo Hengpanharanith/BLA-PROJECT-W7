@@ -30,6 +30,7 @@ class RidesPreferencesProvider extends ChangeNotifier {
   void addPreference(RidePreference pref) async {
     if (!pastPreferences.data!.contains(pref)) {
       // remove the past if duplicate place is found
+      pastPreferences.data!.remove(pref);
       pastPreferences.data!.add(pref);
 
       // update the list of past preferences
