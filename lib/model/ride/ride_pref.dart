@@ -17,6 +17,15 @@ class RidePreference {
       required this.requestedSeats});
 
   @override
+bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is RidePreference &&
+          runtimeType == other.runtimeType &&
+          departure == other.departure &&
+          departureDate == other.departureDate &&
+          arrival == other.arrival &&
+          requestedSeats == other.requestedSeats;
+          
   String toString() {
     return 'RidePref(departure: ${departure.name}, '
         'departureDate: ${departureDate.toIso8601String()}, '
